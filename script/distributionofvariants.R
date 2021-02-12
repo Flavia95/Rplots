@@ -1,0 +1,10 @@
+library(ggplot2)
+library(argparse)
+args = commandArgs(trailingOnly=TRUE)
+input=as.numeric(args[1])
+
+myd = read.delim(args[1], sep="\t", header=F)
+colnames(myd) = c("chrom", "pos")
+p = ggplot(myd) + geom_histogram(aes(x=pos),binwidth=1e6)
+h = p + scale_color_grey()+scale_fill_grey() + theme_classic() + labs(title = "Distribution of Deletion", x = 'Position', y= "Count")
+ggsave("./distributiofdel.png", plot= h, device="png", width = 20, height = 15, units = "cm", dpi = 300)

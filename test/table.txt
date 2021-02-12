@@ -1,0 +1,7 @@
+species      samples values N	
+Mouse chr5  151834684	3915010 
+Mouse chr8  129401213	3789781 
+Mouse chr18  90702639	3250005 
+HomoSapiens  chr5  181538259	2555066 
+HomoSapiens  chr8  145138636	370500
+HomoSapiens  chr18  80373285	283680
